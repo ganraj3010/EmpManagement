@@ -1,3 +1,30 @@
 <template>
-    
+    <div class="slds-align_absolute-center">
+        <div class="container">
+            <lightning-card>
+                <lightning-input    required="true" 
+                                    class="slds-m-left_x-small slds-m-right_x-small" 
+                                    type="text" 
+                                    value={userName} 
+                                    label="User Name" 
+                                    onchange={setLogin}>
+                </lightning-input>
+                <lightning-input required="true" 
+                                 class="slds-m-left_x-small slds-m-right_x-small" 
+                                 type="password" 
+                                 value={password} 
+                                 label="Password" 
+                                 onchange={setPassword}>
+                </lightning-input>
+                <div slot="footer">
+                    <div class="slds-align_absolute-center">
+                        <lightning-button variant="brand" label="Login" title="Login" onclick={handleClick}
+                            class="slds-m-left_x-small" disabled={loginDisabled}></lightning-button>
+                        <lightning-button variant="brand" label="Register" title="Register" onclick={handleClick}
+                            class="slds-m-left_x-small"></lightning-button>
+                    </div>
+                </div>
+            </lightning-card>
+        </div>
+    </div>
 </template>
